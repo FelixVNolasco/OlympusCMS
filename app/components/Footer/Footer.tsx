@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export const Footer = () => {
@@ -15,7 +16,7 @@ export const Footer = () => {
                             rel="noopener noreferrer"
                             className="bg-gray-300/90 p-2 rounded-lg transition ease-in-out duration-300 hover:-translate-y-2 cursor-pointer"
                         >
-                            <img
+                            <Image
                                 src="https://www.svgrepo.com/show/349375/github.svg"
                                 width={24}
                                 height={24}
@@ -29,7 +30,7 @@ export const Footer = () => {
                             rel="noopener noreferrer"
                             className="bg-white p-2 rounded-lg transition ease-in-out duration-300 hover:-translate-y-2 "
                         >
-                            <img
+                            <Image
                                 src="https://www.svgrepo.com/show/157006/linkedin.svg"
                                 width={24}
                                 height={24}

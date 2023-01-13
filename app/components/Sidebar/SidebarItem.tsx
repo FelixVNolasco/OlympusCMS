@@ -1,10 +1,10 @@
+import Link from "next/link";
 import React from "react";
-import { Link } from "react-router-dom";
 
-export const SidebarItem = ({ item }) => {
+export const SidebarItem = ({ item }: { item: any }) => {
     return (
         <>
-            <Link to={item.path}>
+            <Link href={item.path}>
                 <li className="font-medium cursor-pointer hover:bg-gray-400 transition ease-in-out p-2 rounded-md">
                     <div className="flex flex-row justify-between">
                         <span>{item.title}</span>
@@ -15,5 +15,3 @@ export const SidebarItem = ({ item }) => {
         </>
     );
 };
-Footer
-© 2023 GitHub, Inc.

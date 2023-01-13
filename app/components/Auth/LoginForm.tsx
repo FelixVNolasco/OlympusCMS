@@ -1,21 +1,16 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useState } from "react";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
-import { useDispatch } from "react-redux";
-import { loginSuccess } from "../../redux/userReducer";
 import Swal from "sweetalert2";
 
 export const LoginForm = () => {
-    const dispatch = useDispatch();
-    const navigate = useNavigate();
 
     const [showPassword, setshowPassword] = useState(false);
     const handleShowPassword = () => {
         setshowPassword(!showPassword);
     };
+
+ 
 
     return (
         <div className="flex mt-6 justify-center h-screen">
@@ -38,9 +33,12 @@ export const LoginForm = () => {
                     onSubmit={async (values, { setSubmitting }) => {
                         try {
                             setSubmitting(true);
-                            const response = await axios.post(
+                            const response:any = await fetch(
                                 "https://olympus-backend.vercel.app/api/auth/login",
-                                values
+                                {
+                                    method: "POST",
+                                    body: values 
+                                }                                
                             );
                             const userData = response.data;
                             dispatch(loginSuccess(userData));
