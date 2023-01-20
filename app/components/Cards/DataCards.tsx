@@ -1,6 +1,6 @@
-import React from "react";
+import Image from "next/image";
 
-export const DataCards = () => {
+export default async function DataCards() {
     return (
         <>
             <div className="flex flex-col md:flex-col lg:flex-row w-full justify-between">
@@ -11,8 +11,7 @@ export const DataCards = () => {
                             <span className="text-lg font-bold">$2,415</span>
                             <div className="flex flex-row">
                                 <span className="mr-2">-11.4</span>
-
-                                <img
+                                <Image
                                     src="https://www.svgrepo.com/show/199621/down-arrow.svg"
                                     width={24}
                                     height={24}
@@ -31,7 +30,7 @@ export const DataCards = () => {
                             <span className="text-lg font-bold">$2,415</span>
                             <div className="flex flex-row">
                                 <span className="mr-2">-1.4</span>
-                                <img
+                                <Image
                                     src="https://www.svgrepo.com/show/199621/down-arrow.svg"
                                     width={24}
                                     height={24}
@@ -50,7 +49,7 @@ export const DataCards = () => {
                             <span className="text-lg font-bold">$2,033</span>
                             <div className="flex flex-row">
                                 <span className="mr-2">+1.7</span>
-                                <img
+                                <Image
                                     src="https://www.svgrepo.com/show/199531/up-arrow-ui.svg"
                                     width={24}
                                     height={24}

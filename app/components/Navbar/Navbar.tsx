@@ -1,14 +1,6 @@
 import Image from "next/image";
-import React from "react";
-
-// import React, { useState } from "react";
-// import { ProfileMenu } from "./Navbar/ProfileMenu";
-// import { useSelector } from "react-redux";
 
 export const Navbar = () => {
-    // const [showProfileMenu, setShowProfileMenu] = useState(false);
-    // const { currentUser } = useSelector((state) => state.user);
-    // const { urlImage } = currentUser;
 
     return (
         <div className="h-16 bg-teal-600 text-white w-full">

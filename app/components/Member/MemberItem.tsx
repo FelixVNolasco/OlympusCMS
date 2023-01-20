@@ -1,14 +1,15 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
-import { Link } from "react-router-dom";
 
-export const MemberItem = ({ member }) => {
+export const MemberItem = ({ member }: { member: any }) => {
     const { _id, username, email, urlImage } = member;
     return (
 
-        <Link to={`/users/${_id}`} className="flex items-center space-around mt-4 p-2 transition ease-in-out duration-200 hover:bg-slate-200">
+        <Link href={`/users/${_id}`} className="flex items-center space-around mt-4 p-2 transition ease-in-out duration-200 hover:bg-slate-200">
             <div className="flex w-1/4 items-center">
                 {urlImage !== "" ? (
-                    <img
+                    <Image
                         className="rounded-md"
                         src={urlImage}
                         alt="Memberphoto"
@@ -16,7 +17,7 @@ export const MemberItem = ({ member }) => {
                         width={32}
                     />
                 ) : (
-                    <img
+                    <Image
                         className="rounded-md"
                         src="https://www.svgrepo.com/show/230988/profile-user.svg"
                         alt="Memberphoto"

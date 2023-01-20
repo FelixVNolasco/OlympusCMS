@@ -1,6 +1,5 @@
-import React from "react";
 
-export const TransactionItem = ({ transaction }) => {
+export const TransactionItem = ({ transaction }: { transaction: any }) => {
     return (
         <>
             <div className="grid grid-cols-4 justify-items-stretch justify-between items-center mb-3">
