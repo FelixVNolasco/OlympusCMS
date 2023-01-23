@@ -1,4 +1,3 @@
-// import Modal from "@/components/shared/modal";
 import Modal from "../Shared/modal";
 import { signIn } from "next-auth/react";
 import {
@@ -12,7 +11,7 @@ import LoadingDots from "../Shared/icons/loading-dots";
 import Image from "next/image";
 
 
-const SignInModal = ({
+export const SignInModal = ({
     showSignInModal,
     setShowSignInModal,
 }: {
@@ -25,7 +24,7 @@ const SignInModal = ({
         <Modal showModal={showSignInModal} setShowModal={setShowSignInModal}>
             <div className="w-full overflow-hidden shadow-xl md:max-w-md md:rounded-2xl md:border md:border-gray-100">
                 <div className="flex flex-col items-center justify-center space-y-3 border-b border-gray-200 bg-white px-4 py-6 pt-8 text-center md:px-16">
-                    <a href="https://precedent.vercel.app">
+                    <a href="https://olympus-store-app.vercel.app/">
                         <Image
                             src="/logo.png"
                             alt="Logo"

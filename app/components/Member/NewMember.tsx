@@ -19,4 +19,7 @@ export default async function NewMembers() {
             </div>
         </div>
     );
-};
+}; 
+
+ 
+
