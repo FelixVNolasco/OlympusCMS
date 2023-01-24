@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default async function DataCards() {
+export default function DataCards() {
     return (
         <>
             <div className="flex flex-col md:flex-col lg:flex-row w-full justify-between">

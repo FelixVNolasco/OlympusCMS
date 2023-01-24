@@ -3,7 +3,7 @@ import Image from 'next/image';
 import {Calendar, CalendarPlus, UserCheck, Mail, User} from 'lucide-react';	
 
 const getUser = (id: string) => {
-  return fetch(`https://olympus-backend.vercel.app/api/users/find/${id}`, { cache: "no-store", headers: { token: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYzBlMmVjODc3MmMwYTQ0YmIwMTQxNiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3NDIzOTA1NSwiZXhwIjoxNjc0NDk4MjU1fQ.9fWAo7ltTi_nQk6dkbFA_cQEm6YSW2BLW3il0tZZBb4` } })
+  return fetch(`https://olympus-backend.vercel.app/api/users/find/${id}`, { cache: "no-store", headers: { token: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYzBlMmVjODc3MmMwYTQ0YmIwMTQxNiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3NDU3MzM3OCwiZXhwIjoxNjc0ODMyNTc4fQ.0HmDQgIUxFB7s4x1sO9XphVK3v7t3VfeQFDkPjx77g8` } })
     .then((res) => res.json())
 }
 
