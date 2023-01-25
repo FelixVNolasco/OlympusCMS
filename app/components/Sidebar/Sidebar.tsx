@@ -6,17 +6,17 @@ const dashboardItems = [
     {
         title: "Home",
         img: "https://www.svgrepo.com/show/16254/home.svg",
-        path: "/",
+        path: "/Dashboard",
     },
     {
         title: "Analytics",
         img: "https://www.svgrepo.com/show/66212/analytics.svg",
-        path: "/",
+        path: "/Dashboard",
     },
     {
         title: "Sales",
         img: "https://www.svgrepo.com/show/22752/ads.svg",
-        path: "/",
+        path: "/Dashboard",
     },
 ];
 
@@ -34,12 +34,12 @@ const quickMenuItems = [
     {
         title: "Transactions",
         img: "https://www.svgrepo.com/show/205809/credit-card-commerce-and-shopping.svg",
-        path: "/",
+        path: "/Dashboard",
     },
     {
         title: "Reports",
         img: "https://www.svgrepo.com/show/235601/analytics.svg",
-        path: "/",
+        path: "/Dashboard",
     },
 ];
 
@@ -47,17 +47,17 @@ const notificationsItems = [
     {
         title: "Mail",
         img: "https://www.svgrepo.com/show/37043/mail.svg",
-        path: "/",
+        path: "/Dashboard",
     },
     {
         title: "Feedback",
         img: "https://www.svgrepo.com/show/357010/approval.svg",
-        path: "/",
+        path: "/Dashboard",
     },
     {
         title: "Messages",
         img: "https://www.svgrepo.com/show/375840/mail.svg",
-        path: "/",
+        path: "/Dashboard",
     },
 ];
 
@@ -65,17 +65,17 @@ const staffItems = [
     {
         title: "Manage",
         img: "https://www.svgrepo.com/show/49407/scientist.svg",
-        path: "/",
+        path: "/Dashboard",
     },
     {
         title: "Analytics",
         img: "https://www.svgrepo.com/show/9099/analytics.svg",
-        path: "/",
+        path: "/Dashboard",
     },
     {
         title: "Reports",
         img: "https://www.svgrepo.com/show/235611/analytics.svg",
-        path: "/",
+        path: "/Dashboard",
     },
 ];
 
