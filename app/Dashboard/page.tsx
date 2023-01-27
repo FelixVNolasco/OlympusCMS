@@ -1,6 +1,7 @@
-import { getLatestUser, getLatestTrasactions } from '../lib/api/dashboard';
+import { getLatestTrasactions } from '../lib/api/dashboard';
 import { MemberItem } from '../components/Member/MemberItem';
 import { TransactionItem } from '../components/Transactions/TransactionItem';
+import { getLatestUser } from '../lib/api/users';
 
 export default async function page() {
 
@@ -39,5 +40,5 @@ export default async function page() {
                 </div>
             </div>
         </>
-    )  
+    )
 }

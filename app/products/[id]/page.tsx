@@ -1,9 +1,5 @@
 import Image from 'next/image'
-
-const getProduct = (id: string) => {
-  return fetch(`https://olympus-backend.vercel.app/api/products/find/${id}`, { cache: "no-store" })
-    .then((res) => res.json())
-}
+import { getProduct } from '../../lib/api/products';
 
 export default async function page({ params }: any) {
 

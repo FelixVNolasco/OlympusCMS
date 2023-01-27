@@ -1,23 +1,19 @@
 import React from 'react'
 import Image from 'next/image';
-import {Calendar, CalendarPlus, UserCheck, Mail, User} from 'lucide-react';	
-
-const getUser = (id: string) => {
-  return fetch(`https://olympus-backend.vercel.app/api/users/find/${id}`, { cache: "no-store", headers: { token: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYzBlMmVjODc3MmMwYTQ0YmIwMTQxNiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3NDg0MTg4MCwiZXhwIjoxNjc1MTAxMDgwfQ.vH_o664tcq8DE82iewEuyWIS14dnDsyj20DmEO5NexY` } })
-    .then((res) => res.json())
-}
+import { Calendar, CalendarPlus, UserCheck, Mail, User } from 'lucide-react';
+import { getUser } from '../../lib/api/users';
 
 export default async function page({ params }: any) {
 
   const { id } = params;
   const user = await getUser(id);
-  
-  const {username, email, createdAt, updatedAt} = user;    
-  
-  const options = { year: 'numeric', month: 'long', day: 'numeric' } as const; 
+
+  const { username, email, createdAt, updatedAt } = user;
+
+  const options = { year: 'numeric', month: 'long', day: 'numeric' } as const;
   const createdAtDate = new Date(createdAt);
   const createdAtDateFormatted = createdAtDate.toLocaleDateString("en-Us", options);
-  
+
   const lastLoginAtDate = new Date(updatedAt);
   const lastLoginAtDateFormatted = lastLoginAtDate.toLocaleDateString("en-Us", options);
 
@@ -47,21 +43,21 @@ export default async function page({ params }: any) {
                 <div className="grid md:grid-cols-2 text-sm">
                   <div className="grid grid-cols-2">
                     <div className="flex items-center">
-                      <User color="purple" size={18} /> 
+                      <User color="purple" size={18} />
                       <div className="p-2 font-semibold">Username</div>
                     </div>
                     <div className="p-2">{username}</div>
                   </div>
                   <div className="grid grid-cols-2">
                     <div className="flex items-center">
-                      <Mail color="purple" size={18} /> 
+                      <Mail color="purple" size={18} />
                       <div className="p-2 font-semibold">Email</div>
                     </div>
                     <div className="p-2">{email}</div>
                   </div>
                   <div className="grid grid-cols-2">
                     <div className="flex items-center">
-                      <UserCheck color="purple" size={18} />                      
+                      <UserCheck color="purple" size={18} />
                       <div className="p-2 font-semibold">Is Admin?</div>
                     </div>
                     {user?.isAdmin ? (
@@ -72,7 +68,7 @@ export default async function page({ params }: any) {
                   </div>
                   <div className="grid grid-cols-2">
                     <div className="flex items-center">
-                      <CalendarPlus color="purple" size={18} />                      
+                      <CalendarPlus color="purple" size={18} />
                       <div className="p-2 font-semibold">Created</div>
                     </div>
                     <div className="p-2">{createdAtDateFormatted}</div>

@@ -1,9 +1,5 @@
 import { ProductCard } from '../components/Cards/ProductCard';
-
-const getHomeProducts = () => {
-  return fetch("https://olympus-backend.vercel.app/api/products", { cache: "no-store" })
-    .then((res) => res.json())
-}
+import { getHomeProducts } from '../lib/api/products';
 
 export default async function HomeProducts() {
   const homeProducts = await getHomeProducts();
