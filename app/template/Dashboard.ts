@@ -1,36 +1,3 @@
-export const latestUsers = [
-    {
-        name: "Felix Vega",
-        date: "24/06/2000",
-        amount: "1984",
-        isApproved: true,
-    },
-    {
-        name: "Felix Vega",
-        date: "23/06/2000",
-        amount: "1984",
-        isApproved: false,
-    },
-    {
-        name: "Felix Vega",
-        date: "22/06/2000",
-        amount: "1984",
-        isApproved: true,
-    },
-    {
-        name: "Felix Vega",
-        date: "21/06/2000",
-        amount: "1984",
-        isApproved: false,
-    },
-    {
-        name: "Felix Vega",
-        date: "20/06/2000",
-        amount: "1984",
-        isApproved: true,
-    },
-];
-
 export const ChartData = [
     {
         name: "Page A",

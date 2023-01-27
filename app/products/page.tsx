@@ -1,8 +1,4 @@
-
-
-import React from 'react'
 import { ProductCard } from '../components/Cards/ProductCard';
-import { motion } from 'framer-motion';
 
 const getHomeProducts = () => {
   return fetch("https://olympus-backend.vercel.app/api/products", { cache: "no-store" })

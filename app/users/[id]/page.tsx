@@ -3,7 +3,7 @@ import Image from 'next/image';
 import {Calendar, CalendarPlus, UserCheck, Mail, User} from 'lucide-react';	
 
 const getUser = (id: string) => {
-  return fetch(`https://olympus-backend.vercel.app/api/users/find/${id}`, { cache: "no-store", headers: { token: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYzBlMmVjODc3MmMwYTQ0YmIwMTQxNiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3NDU3MzM3OCwiZXhwIjoxNjc0ODMyNTc4fQ.0HmDQgIUxFB7s4x1sO9XphVK3v7t3VfeQFDkPjx77g8` } })
+  return fetch(`https://olympus-backend.vercel.app/api/users/find/${id}`, { cache: "no-store", headers: { token: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYzBlMmVjODc3MmMwYTQ0YmIwMTQxNiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3NDg0MTg4MCwiZXhwIjoxNjc1MTAxMDgwfQ.vH_o664tcq8DE82iewEuyWIS14dnDsyj20DmEO5NexY` } })
     .then((res) => res.json())
 }
 
@@ -12,9 +12,8 @@ export default async function page({ params }: any) {
   const { id } = params;
   const user = await getUser(id);
   
-
-  const {createdAt, updatedAt} = user;
-    
+  const {username, email, createdAt, updatedAt} = user;    
+  
   const options = { year: 'numeric', month: 'long', day: 'numeric' } as const; 
   const createdAtDate = new Date(createdAt);
   const createdAtDateFormatted = createdAtDate.toLocaleDateString("en-Us", options);
@@ -33,8 +32,8 @@ export default async function page({ params }: any) {
             ) : (
               <Image
                 src="https://www.svgrepo.com/show/230988/profile-user.svg"
-                width={32}
-                height={32}
+                width={256}
+                height={256}
                 alt=""
               />
             )}
@@ -51,14 +50,14 @@ export default async function page({ params }: any) {
                       <User color="purple" size={18} /> 
                       <div className="p-2 font-semibold">Username</div>
                     </div>
-                    <div className="p-2">{user?.username}</div>
+                    <div className="p-2">{username}</div>
                   </div>
                   <div className="grid grid-cols-2">
                     <div className="flex items-center">
                       <Mail color="purple" size={18} /> 
                       <div className="p-2 font-semibold">Email</div>
                     </div>
-                    <div className="p-2">{user?.email}</div>
+                    <div className="p-2">{email}</div>
                   </div>
                   <div className="grid grid-cols-2">
                     <div className="flex items-center">

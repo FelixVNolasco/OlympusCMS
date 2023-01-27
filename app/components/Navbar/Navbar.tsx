@@ -41,7 +41,7 @@ export const Navbar = () => {
                     </div>
                     <AnimatePresence>
                         {/* {!session && status !== "loading" ? ( */}
-                        {true ? (
+                        {!true ? (
                             <motion.button
                                 className="rounded-full mr-2 border border-green-400 bg-green-200 p-1.5 px-4 text-sm text-gray-800 transition-all hover:bg-white hover:text-black"
                                 onClick={() => setShowSignInModal(true)}
