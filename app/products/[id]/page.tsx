@@ -28,7 +28,7 @@ export default async function page({ params }: any) {
               <p className='text-lg font-semibold'>${price}</p>
             </div>
             <div className="flex justify-center items-center gap-4 transition ease-in-out duration-150">
-              <Link href={`/products/modify/${product._id}`} className='text-stone-50 bg-gray-700 w-full p-2 rounded-md font-semibold cursor-pointer disabled:bg-gray-400 disabled:text-gray-600 disabled:cursor-not-allowed'>Actualizar</Link>
+              <Link href={`/products/modify/${product._id}`} className='text-center text-stone-50 bg-gray-700 w-full p-2 rounded-md font-semibold cursor-pointer disabled:bg-gray-400 disabled:text-gray-600 disabled:cursor-not-allowed'>Actualizar</Link>
             </div>
           </div>
         </div>
