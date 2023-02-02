@@ -117,7 +117,7 @@ export default function Page({ params }: any) {
         <Form className="flex mt-6 m-auto sm:mt-6 sm:m-auto md:mt-6 md:m-auto lg:mt-6 lg:m-auto xl:mt-2 xl:mr-6 2xl:mt-2 2xl:mr-6 w-5/6 h-full   sm:border-slate-400 border-0 sm:border-2 rounded-lg drop-shadow-lg sm:shadow-sm shadow-slate-500 p-10">
           <div className="flex flex-col items-center w-1/2">
             <Image className="rounded-md" width={256} height={256} src={(photoURL) ? photoURL : "https://res.cloudinary.com/dhyxqmnua/image/upload/v1642722284/Olympus/blank-profile-picture-973460_qb0gmg.svg"} alt="" />
-            <input className="mt-4" type="file" onChange={handleProfileChange}/>
+            <input className="mt-4" type="file" onChange={handleProfileChange}/>  
             <button disabled={!photo} className="w-32 px-2 py-1 rounded-md bg-gray-800/90 text-slate-50 mt-1 cursor-pointer disabled:bg-gray-400 disabled:text-gray-600 disabled:cursor-not-allowed" onClick={handleUploadProfilePicture}>Upload</button>
           </div>
           <div className="flex flex-col w-1/2">

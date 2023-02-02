@@ -32,9 +32,9 @@ const quickMenuItems = [
         path: "/products",
     },
     {
-        title: "Transactions",
+        title: "Orders",
         img: "https://www.svgrepo.com/show/205809/credit-card-commerce-and-shopping.svg",
-        path: "/Dashboard",
+        path: "/orders",
     },
     {
         title: "Reports",
