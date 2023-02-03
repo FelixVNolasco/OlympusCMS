@@ -7,6 +7,7 @@ export const UserCard = ({ user }: { user: any }) => {
         <Link
             href={`/users/${user._id}`}
             className="border-slate-400 border-2 rounded-sm drop-shadow-lg shadow-sm shadow-slate-500 transition ease-in-out duration-300 hover:-translate-y-2 cursor-pointer"
+            key={user._id}
         >
             <div className="flex flex-col p-4">
                 <div className="flex justify-around">
